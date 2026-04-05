@@ -21,8 +21,7 @@ body{
     background-color: var(--body-background-color);
     min-height: 100vh;
     margin:0;
-    padding-top:6.25rem;
-    padding-bottom:6.25rem;
+    padding-block:6.25rem;
     font-family: 'Outfit',sans-serif;
 }
 p,h1,h2,span{
@@ -32,6 +31,9 @@ p,h1,h2,span{
 h1,h2{
     font-family: 'Young Serif',serif;
     font-weight: 400;
+}
+h1{
+    font-size:clamp(1.5rem,5vw,2.5rem);
 }
 li{
    margin-bottom: var(--list-vertical-padding);
@@ -46,9 +48,8 @@ li{
     border-radius: var(--container-border-radius);
 }
 .img-container{
-  padding-left: var(--container-padding);
-  padding-right:var(--container-padding);
-  padding-top:var(--container-padding);
+  padding: var(--container-padding) var(--container-padding) 0;
+
   width:100%;
   box-sizing: border-box;
   display: flex;
@@ -61,8 +62,7 @@ li{
 }
 .recipe-container{
     width: 100%;
-    padding-left: var(--container-padding);
-    padding-right:var(--container-padding);
+    padding: 0 var(--container-padding);
     box-sizing: border-box;
     display:flex;
     flex-direction: column;
@@ -84,15 +84,7 @@ li{
 .fat-default-paragraph{
     font-weight: 700;
 }
-/*
-.time-container{
-    width:100%;
-    background-color: var(--element-bg-color);
-    /*margin-right: var(--container-padding);
-    margin-left:var(--container-padding);*/
-   /* padding-left:var(--time-container-padding);
-    box-sizing: border-box;
-}*/
+
 .time-container{
     width:100%;
     display:flex;
@@ -104,8 +96,7 @@ li{
    border-radius: var(--img-border-radius);
 }
 .preparation-paragraph{
-    padding-left:var(--time-container-padding);
-    padding-top:var(--time-container-padding);
+    padding: var(--time-container-padding) 0 0 var(--time-container-padding);
     color:var(--rosa-color);
     font-weight: 600;
 }
